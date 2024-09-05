@@ -3,10 +3,8 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/cadastro_usuario', [UserController::class, "formCriarUsuario"]);
 
-Route::get('/users', [UserController::class, 'listar']);
+Route::get('/listar_usuario', [UserController::class, 'listar']);
 
-Route::post('/users', [UserController::class, 'criar']);
+Route::post('/criar_usuario', [UserController::class, 'criar']);

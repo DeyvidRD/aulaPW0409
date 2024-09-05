@@ -14,7 +14,7 @@ class UserController extends Controller
         $user->email = $request->email;
 
         $user->save();
-        return redirect('/users');
+        return redirect('/listar_usuario');
     }
 
     public function listar() {
@@ -22,5 +22,10 @@ class UserController extends Controller
 
         return view("users", ["users"=>$users]);
     }
+
+    public function formCriarUsuario() {
+        return view("cadastro_usuario");
+    }
+
 }
 

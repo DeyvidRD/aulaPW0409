@@ -7,7 +7,7 @@
     <title>Criar usuario</title>
 </head>
 <body>
-    <form action="/users" method="post">
+    <form action="/criar_usuario" method="post">
         @csrf
         <label for="name">Nome</label>
         <input type="text" name="name">
